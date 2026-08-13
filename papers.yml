@@ -73,6 +73,13 @@ sections:
         desc_en: "High-performance parallel computing language, popular for differentiable soft body simulation in Embodied AI research."
         desc_zh: "高性能并行计算语言，具身智能研究中常用于可微柔体仿真。"
 
+      - title: "Real2Render2Real: Scaling Robot Data Without Dynamics Simulation or Robot Hardware"
+        url: "https://arxiv.org/abs/2505.09601"
+        year: 2025
+        tags: [paper, star]
+        desc_en: "Scales robot training data via a Real→Render→Real pipeline without dynamics simulation or physical robot hardware."
+        desc_zh: "无需动力学仿真或机器人硬件，通过 Real→Render→Real 流水线大规模生成机器人训练数据。"
+
   - id: tasks
     title_en: "Deformable Object Manipulation Tasks"
     title_zh: "柔性物体操作任务"
@@ -110,6 +117,20 @@ sections:
         tags: [paper, benchmark]
         desc_en: "Systematic evaluation of the sim-to-real gap in cloth manipulation across different simulators."
         desc_zh: "布料操作中 sim-to-real gap 的系统评测，对仿真器选型有重要参考价值。"
+
+      - title: "SoftMimicGen: A Data Generation System for Scalable Robot Learning in Deformable Object Manipulation"
+        url: "https://arxiv.org/abs/2603.25725"
+        year: 2026
+        tags: [paper, star]
+        desc_en: "Extends MimicGen to deformable object manipulation, enabling scalable robot demonstration data generation."
+        desc_zh: "MimicGen 在柔性物体操作领域的扩展，实现可扩展的机器人操作数据生成。"
+
+      - title: "DeformGen: Dynamics-Based Topology Augmentation for Deformable Manipulation Policy Learning"
+        url: "https://arxiv.org/abs/2606.25939"
+        year: 2026
+        tags: [paper]
+        desc_en: "Dynamics-based topology augmentation for deformable object manipulation policy learning, built on PhysTwin and Real2Render2Real."
+        desc_zh: "基于动力学的拓扑增强方法，用于柔性物体操作策略学习，结合 PhysTwin 与 Real2Render2Real。"
 
   - id: sim2real
     title_en: "Sim-to-Real Transfer"
@@ -174,6 +195,20 @@ sections:
         tags: [paper]
         desc_en: "3D garment generation via differentiable geometry images (no integrated physics yet)."
         desc_zh: "基于可微几何图像的 3D 衣物生成方案（暂未集成物理特性）。"
+
+      - title: "PhysTwin: Physics-Informed Reconstruction and Simulation of Deformable Objects from Videos"
+        url: "https://arxiv.org/abs/2503.17973"
+        year: 2025
+        tags: [paper, star]
+        desc_en: "Physics-informed reconstruction and simulation of deformable objects from video; a precursor to Real2Render2Real and DeformGen."
+        desc_zh: "从视频中物理感知地重建与仿真可变形物体，是 Real2Render2Real 和 DeformGen 的前置工作。"
+
+      - title: "Gaussian Garments: Reconstructing Simulation-Ready Clothing with Photorealistic Appearance from Multi-View Video"
+        url: "https://arxiv.org/abs/2409.08189"
+        year: 2024
+        tags: [paper]
+        desc_en: "Reconstructs simulation-ready, photorealistic standalone garment assets from multi-view video."
+        desc_zh: "从多视角视频重建可仿真、具备照片级真实感的独立服装资产。"
 
   - id: foundations
     title_en: "Foundational Simulation Techniques"
