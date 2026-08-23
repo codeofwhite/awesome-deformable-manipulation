@@ -14,6 +14,7 @@
 - [Benchmarks & Evaluation](#benchmarks--evaluation)
 - [3D Asset Generation for Simulation](#3d-asset-generation-for-simulation)
 - [Foundational Simulation Techniques](#foundational-simulation-techniques)
+- [Legend](#legend)
 
 ---
 
@@ -69,7 +70,7 @@
 | 📄  | Paper                     |
 | 🔧  | Tool / Framework / Engine |
 | 📊  | Benchmark / Dataset       |
-| ⭐  | Recommended / Important   |
+| ⭐   | Recommended / Important   |
 
 ---
 
@@ -77,7 +78,7 @@
 
 Contributions welcome! Please read the [contribution guidelines](CONTRIBUTING.md) first.
 
-**hints: Quick way to add a paper:**
+**Quick way to add a paper:**
 
 1. Edit `papers.yml` — add your entry under the appropriate section
 2. Run `python generate.py`

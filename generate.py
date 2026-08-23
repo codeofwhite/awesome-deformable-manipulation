@@ -77,12 +77,14 @@ def generate(data: dict, lang: str, output_path: Path):
 
     # Table of Contents
     toc_label = "Contents" if lang == "en" else "目录"
+    legend_title = "Legend" if lang == "en" else "图例"
     lines.append(f"## {toc_label}")
     lines.append("")
     for section in data["sections"]:
         stitle = section[f"title_{lang}"]
         anchor = github_anchor(stitle)
         lines.append(f"- [{stitle}](#{anchor})")
+    lines.append(f"- [{legend_title}](#{github_anchor(legend_title)})")
     lines.append("")
     lines.append("---")
     lines.append("")
@@ -92,7 +94,6 @@ def generate(data: dict, lang: str, output_path: Path):
         lines.append(render_section(section, lang))
 
     # Legend
-    legend_title = "Legend" if lang == "en" else "图例"
     lines.extend([
         "---",
         "",
@@ -106,7 +107,7 @@ def generate(data: dict, lang: str, output_path: Path):
             "| 📄  | Paper                     |",
             "| 🔧  | Tool / Framework / Engine |",
             "| 📊  | Benchmark / Dataset       |",
-            "| ⭐  | Recommended / Important   |",
+            "| ⭐   | Recommended / Important   |",
         ])
     else:
         lines.extend([
