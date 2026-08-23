@@ -1,20 +1,17 @@
-# Awesome Deformable Object Simulation for Embodied AI 🧸
-
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
+# Awesome Deformable Object Simulation for Embodied AI 🧸 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 > A curated list of resources on simulating deformable objects (cloth, rope, soft bodies) for embodied intelligence — simulation environments, manipulation tasks, sim-to-real transfer, and asset generation.
 
-[English](README.md) | [中文](README.zh-CN.md)
+[Project website](https://codeofwhite.github.io/awesome-soft-body-simulation/) | [English](README.md) | [中文](README.zh-CN.md)
 
 ---
 
 ## Contents
 
-- [Simulation Environments & Platforms](#simulation-environments-platforms)
+- [Simulation Environments & Platforms](#simulation-environments--platforms)
 - [Deformable Object Manipulation Tasks](#deformable-object-manipulation-tasks)
 - [Sim-to-Real Transfer](#sim-to-real-transfer)
-- [Benchmarks & Evaluation](#benchmarks-evaluation)
+- [Benchmarks & Evaluation](#benchmarks--evaluation)
 - [3D Asset Generation for Simulation](#3d-asset-generation-for-simulation)
 - [Foundational Simulation Techniques](#foundational-simulation-techniques)
 
@@ -67,12 +64,12 @@
 
 ## Legend
 
-| Tag | Meaning |
-|-----|---------|
-| 📄 | Paper |
-| 🔧 | Tool / Framework / Engine |
-| 📊 | Benchmark / Dataset |
-| ⭐ | Recommended / Important |
+| Tag | Meaning                   |
+| --- | ------------------------- |
+| 📄  | Paper                     |
+| 🔧  | Tool / Framework / Engine |
+| 📊  | Benchmark / Dataset       |
+| ⭐  | Recommended / Important   |
 
 ---
 
@@ -85,9 +82,3 @@ Contributions welcome! Please read the [contribution guidelines](CONTRIBUTING.md
 1. Edit `papers.yml` — add your entry under the appropriate section
 2. Run `python generate.py`
 3. Submit a Pull Request
-
----
-
-## License
-
-[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)

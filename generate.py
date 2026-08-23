@@ -25,10 +25,9 @@ def github_anchor(heading: str) -> str:
     anchor = heading.lower()
     # Remove characters that are not alphanumeric, space, or hyphen
     anchor = re.sub(r"[^\w\s-]", "", anchor)
-    # Replace spaces with hyphens
-    anchor = re.sub(r"\s+", "-", anchor)
-    # Collapse multiple hyphens
-    anchor = re.sub(r"-+", "-", anchor)
+    # GitHub replaces each whitespace character with a hyphen. Keep repeated
+    # hyphens because punctuation removal can leave adjacent spaces.
+    anchor = re.sub(r"\s", "-", anchor)
     # Remove leading/trailing hyphens
     anchor = anchor.strip("-")
     return anchor
@@ -66,14 +65,11 @@ def generate(data: dict, lang: str, output_path: Path):
     desc = meta[f"description_{lang}"]
 
     lines = [
-        f"# {title} 🧸",
-        "",
-        "[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)",
-        "[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)",
+        f"# {title} 🧸 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)",
         "",
         f"> {desc}",
         "",
-        "[English](README.md) | [中文](README.zh-CN.md)",
+        "[Project website](https://codeofwhite.github.io/awesome-soft-body-simulation/) | [English](README.md) | [中文](README.zh-CN.md)",
         "",
         "---",
         "",
@@ -97,39 +93,30 @@ def generate(data: dict, lang: str, output_path: Path):
 
     # Legend
     legend_title = "Legend" if lang == "en" else "图例"
-    tag_header = "Tag" if lang == "en" else "标签"
-    meaning_header = "Meaning" if lang == "en" else "含义"
-
-    legend_descriptions = {
-        "en": {
-            "paper": "Paper",
-            "tool": "Tool / Framework / Engine",
-            "dataset": "Benchmark / Dataset",
-            "star": "Recommended / Important",
-        },
-        "zh": {
-            "paper": "论文",
-            "tool": "工具 / 框架 / 引擎",
-            "dataset": "基准测试 / 数据集",
-            "star": "推荐 / 重要",
-        },
-    }
-
     lines.extend([
         "---",
         "",
         f"## {legend_title}",
         "",
-        f"| {tag_header} | {meaning_header} |",
-        "|-----|---------|",
     ])
-    seen_emojis = set()
-    for tag, emoji in TAG_EMOJI.items():
-        if emoji in seen_emojis:
-            continue
-        seen_emojis.add(emoji)
-        desc_text = legend_descriptions[lang].get(tag, tag)
-        lines.append(f"| {emoji} | {desc_text} |")
+    if lang == "en":
+        lines.extend([
+            "| Tag | Meaning                   |",
+            "| --- | ------------------------- |",
+            "| 📄  | Paper                     |",
+            "| 🔧  | Tool / Framework / Engine |",
+            "| 📊  | Benchmark / Dataset       |",
+            "| ⭐  | Recommended / Important   |",
+        ])
+    else:
+        lines.extend([
+            "| 标签 | 含义                 |",
+            "| ---- | -------------------- |",
+            "| 📄   | 论文                 |",
+            "| 🔧   | 工具 / 框架 / 引擎  |",
+            "| 📊   | 基准测试 / 数据集    |",
+            "| ⭐   | 推荐 / 重要          |",
+        ])
     lines.append("")
 
     # Contributing
@@ -146,12 +133,6 @@ def generate(data: dict, lang: str, output_path: Path):
             "1. Edit `papers.yml` — add your entry under the appropriate section",
             "2. Run `python generate.py`",
             "3. Submit a Pull Request",
-            "",
-            "---",
-            "",
-            "## License",
-            "",
-            "[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)",
         ])
     else:
         lines.extend([
@@ -166,12 +147,6 @@ def generate(data: dict, lang: str, output_path: Path):
             "1. 编辑 `papers.yml` — 在对应分类下添加条目",
             "2. 运行 `python generate.py`",
             "3. 提交 Pull Request",
-            "",
-            "---",
-            "",
-            "## 许可证",
-            "",
-            "[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)",
         ])
 
     output_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
