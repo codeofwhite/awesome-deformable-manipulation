@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="面向具身智能的柔性物体仿真精选资源，覆盖仿真环境、操作任务、Sim-to-Real、基准测试与资产生成。">
+  <meta name="theme-color" content="#07110f">
+  <title>Soft Body Atlas · 具身智能柔性物体仿真</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="site-header" data-header>
+    <a class="brand" href="#top" aria-label="Soft Body Atlas 首页">
+      <span class="brand-mark" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+      </span>
+      <span>Soft Body <strong>Atlas</strong></span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="#scope">研究版图</a>
+      <a href="#highlights">精选资源</a>
+      <a href="#contribute">参与贡献</a>
+    </nav>
+    <a class="header-action" href="https://github.com/codeofwhite/awesome-soft-body-simulation" target="_blank" rel="noreferrer">
+      GitHub <span aria-hidden="true">↗</span>
+    </a>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <canvas id="soft-canvas" aria-hidden="true"></canvas>
+      <div class="hero-noise" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span></span> Awesome list for Embodied AI</p>
+        <h1>让机器人理解<br><em>柔软的世界</em></h1>
+        <p class="hero-copy">
+          一份面向具身智能研究者的可变形体仿真资源图谱，聚合布料、绳索与软体的仿真环境、操作任务、迁移方法和生成技术。
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#scope">探索资源 <span aria-hidden="true">↓</span></a>
+          <a class="button button-ghost" href="README.zh-CN.md">阅读完整清单</a>
+        </div>
+      </div>
+
+      <div class="hero-aside" aria-label="项目数据">
+        <div class="stat">
+          <strong>25</strong>
+          <span>精选资源</span>
+        </div>
+        <div class="stat">
+          <strong>06</strong>
+          <span>研究方向</span>
+        </div>
+        <div class="stat stat-wide">
+          <span class="pulse" aria-hidden="true"></span>
+          <span>Open source · Continuously curated</span>
+        </div>
+      </div>
+
+      <p class="hero-note">DEFORM · SIMULATE · LEARN</p>
+    </section>
+
+    <section class="intro section-shell" aria-labelledby="intro-title">
+      <p class="section-index">01 / OVERVIEW</p>
+      <div class="intro-grid">
+        <h2 id="intro-title">从物理世界<br>到智能策略</h2>
+        <div>
+          <p class="lead">柔性物体没有固定形状，却存在于机器人需要面对的每一个真实场景。</p>
+          <p>本项目围绕“感知—仿真—操作—迁移”链路，筛选值得关注的论文、工具、数据集与基准，让研究者更快建立领域地图。</p>
+        </div>
+      </div>
+      <div class="flow" aria-label="研究流程">
+        <div><span>01</span><strong>建模</strong><small>Model</small></div>
+        <i aria-hidden="true"></i>
+        <div><span>02</span><strong>仿真</strong><small>Simulate</small></div>
+        <i aria-hidden="true"></i>
+        <div><span>03</span><strong>学习</strong><small>Learn</small></div>
+        <i aria-hidden="true"></i>
+        <div><span>04</span><strong>迁移</strong><small>Transfer</small></div>
+      </div>
+    </section>
+
+    <section class="scope" id="scope" aria-labelledby="scope-title">
+      <div class="section-shell">
+        <div class="section-heading">
+          <div>
+            <p class="section-index">02 / RESEARCH MAP</p>
+            <h2 id="scope-title">六个方向，<em>一张地图</em></h2>
+          </div>
+          <p>从底层求解器到真实世界部署，覆盖柔性物体仿真的关键研究环节。</p>
+        </div>
+
+        <div class="scope-grid">
+          <article class="scope-card scope-card-featured">
+            <div class="card-top"><span>01</span><span class="card-icon">⌁</span></div>
+            <div>
+              <p>ENVIRONMENTS</p>
+              <h3>仿真环境与平台</h3>
+              <p>探索 SAPIEN、Genesis、Isaac Sim、MuJoCo 等主流多物理仿真工具。</p>
+            </div>
+            <a href="README.zh-CN.md#仿真环境与平台" aria-label="查看仿真环境与平台资源">7 项资源 <span>↗</span></a>
+          </article>
+
+          <article class="scope-card">
+            <div class="card-top"><span>02</span><span class="card-icon">◇</span></div>
+            <div><p>MANIPULATION</p><h3>柔性物体操作</h3><p>折叠、悬挂、抓取与移动操作的任务、数据和策略学习。</p></div>
+            <a href="README.zh-CN.md#柔性物体操作任务">6 项资源 <span>↗</span></a>
+          </article>
+
+          <article class="scope-card">
+            <div class="card-top"><span>03</span><span class="card-icon">⇄</span></div>
+            <div><p>SIM-TO-REAL</p><h3>仿真到现实</h3><p>缩小动力学与视觉域差异，让模拟训练真正抵达现实世界。</p></div>
+            <a href="README.zh-CN.md#sim-to-real-迁移">查看资源 <span>↗</span></a>
+          </article>
+
+          <article class="scope-card">
+            <div class="card-top"><span>04</span><span class="card-icon">▦</span></div>
+            <div><p>BENCHMARKS</p><h3>基准与评估</h3><p>用标准环境与统一指标，可靠比较算法的学习效率和泛化能力。</p></div>
+            <a href="README.zh-CN.md#基准测试与评估">查看资源 <span>↗</span></a>
+          </article>
+
+          <article class="scope-card">
+            <div class="card-top"><span>05</span><span class="card-icon">✦</span></div>
+            <div><p>3D GENERATION</p><h3>物理资产生成</h3><p>从图像或视频重建可仿真、带物理属性的三维柔性资产。</p></div>
+            <a href="README.zh-CN.md#面向仿真的-3d-资产生成">6 项资源 <span>↗</span></a>
+          </article>
+
+          <article class="scope-card">
+            <div class="card-top"><span>06</span><span class="card-icon">∿</span></div>
+            <div><p>FOUNDATIONS</p><h3>基础仿真技术</h3><p>PBD、有限元与可微物理：理解柔性体运动背后的计算方法。</p></div>
+            <a href="README.zh-CN.md#基础仿真技术">4 项资源 <span>↗</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="highlights section-shell" id="highlights" aria-labelledby="highlights-title">
+      <div class="section-heading compact">
+        <div>
+          <p class="section-index">03 / HIGHLIGHTS</p>
+          <h2 id="highlights-title">从这里开始</h2>
+        </div>
+        <a class="text-link" href="README.zh-CN.md">全部 25 项资源 <span>→</span></a>
+      </div>
+
+      <div class="resource-list">
+        <a class="resource" href="https://arxiv.org/abs/2411.01200" target="_blank" rel="noreferrer">
+          <span class="resource-number">01</span>
+          <span class="resource-main"><small>SIMULATION · BENCHMARK</small><strong>GarmentLab</strong><span>统一的衣物操作仿真与评测平台</span></span>
+          <span class="resource-year">2024</span><span class="resource-arrow">↗</span>
+        </a>
+        <a class="resource" href="https://arxiv.org/abs/2011.07215" target="_blank" rel="noreferrer">
+          <span class="resource-number">02</span>
+          <span class="resource-main"><small>RL · BENCHMARK</small><strong>SoftGym</strong><span>柔性物体深度强化学习经典基准</span></span>
+          <span class="resource-year">2020</span><span class="resource-arrow">↗</span>
+        </a>
+        <a class="resource" href="https://arxiv.org/abs/2503.17973" target="_blank" rel="noreferrer">
+          <span class="resource-number">03</span>
+          <span class="resource-main"><small>RECONSTRUCTION · PHYSICS</small><strong>PhysTwin</strong><span>从视频重建并仿真柔性物体</span></span>
+          <span class="resource-year">2025</span><span class="resource-arrow">↗</span>
+        </a>
+        <a class="resource" href="https://github.com/taichi-dev/taichi" target="_blank" rel="noreferrer">
+          <span class="resource-number">04</span>
+          <span class="resource-main"><small>TOOL · DIFFERENTIABLE</small><strong>Taichi</strong><span>面向并行计算与可微仿真的高性能语言</span></span>
+          <span class="resource-year">TOOL</span><span class="resource-arrow">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="contribute" id="contribute" aria-labelledby="contribute-title">
+      <div class="contribute-orb" aria-hidden="true"></div>
+      <div class="section-shell contribute-inner">
+        <p class="section-index">04 / OPEN COLLABORATION</p>
+        <h2 id="contribute-title">一起完善柔性世界的<br><em>研究坐标</em></h2>
+        <p>发现了值得收录的论文、工具或数据集？欢迎提交 Pull Request，让这份清单持续生长。</p>
+        <div class="hero-actions">
+          <a class="button button-light" href="CONTRIBUTING.md">查看贡献指南</a>
+          <a class="button button-outline" href="https://github.com/codeofwhite/awesome-soft-body-simulation" target="_blank" rel="noreferrer">访问 GitHub <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span><span>Soft Body <strong>Atlas</strong></span></a>
+    <p>Curated for Embodied Intelligence · CC0 1.0</p>
+    <div><a href="README.md">EN</a><span>/</span><a href="README.zh-CN.md">中文</a></div>
+  </footer>
+</body>
+</html>
