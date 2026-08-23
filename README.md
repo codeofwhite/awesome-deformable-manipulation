@@ -77,7 +77,7 @@
 
 Contributions welcome! Please read the [contribution guidelines](CONTRIBUTING.md) first.
 
-**Quick way to add a paper:**
+**hints: Quick way to add a paper:**
 
 1. Edit `papers.yml` — add your entry under the appropriate section
 2. Run `python generate.py`
