@@ -31,6 +31,13 @@ sections:
     title_en: "Simulation Environments & Platforms"
     title_zh: "仿真环境与平台"
     papers:
+      - title: "RFUniverse: A Multiphysics Simulation Platform for Embodied AI"
+        url: "https://arxiv.org/abs/2202.00199"
+        year: 2022
+        tags: [paper, tool]
+        desc_en: "Multiphysics environment for household robot learning, including soft-body interactions, fluids, airflow, and heat transfer."
+        desc_zh: "面向家务机器人学习的多物理环境，覆盖柔性体交互、流体、气流与热传递。"
+
       - title: "SAPIEN: A SimulAted Part-based Interactive ENvironment"
         url: "https://arxiv.org/abs/2003.08515"
         authors: "Fanbo Xiang, Yuzhe Qin, Kaichun Mo et al."
@@ -84,6 +91,27 @@ sections:
     title_en: "Deformable Object Manipulation Tasks"
     title_zh: "柔性物体操作任务"
     papers:
+      - title: "DexGarmentLab: Dexterous Garment Manipulation Environment with Generalizable Policy"
+        url: "https://arxiv.org/abs/2505.11032"
+        year: 2025
+        tags: [paper, benchmark]
+        desc_en: "Bimanual dexterous garment simulation with structural-correspondence demonstration generation and a hierarchical manipulation policy."
+        desc_zh: "双手灵巧衣物操作仿真环境，结合结构对应的示范扩增与分层操作策略。"
+
+      - title: "DexDeform: Dexterous Deformable Object Manipulation with Human Demonstrations and Differentiable Physics"
+        url: "https://arxiv.org/abs/2304.03223"
+        year: 2023
+        tags: [paper]
+        desc_en: "Learns dexterous soft-object skills from human demonstrations and refines planned actions with differentiable physics."
+        desc_zh: "从人类示范学习灵巧软体操作技能，并用可微物理优化规划动作。"
+
+      - title: "GraphGarment: Learning Garment Dynamics for Bimanual Cloth Manipulation Tasks"
+        url: "https://arxiv.org/abs/2503.05817"
+        year: 2025
+        tags: [paper]
+        desc_en: "Learns garment dynamics in simulation with graph networks and uses a residual model for real-world bimanual garment hanging."
+        desc_zh: "用图网络学习仿真衣物动力学，并以残差模型补偿实机双臂挂衣任务中的预测误差。"
+
       - title: "GarmentLab: A Unified Simulation and Benchmark for Garment Manipulation"
         url: "https://arxiv.org/abs/2411.01200"
         authors: "Haoran Lu et al."
@@ -136,6 +164,27 @@ sections:
     title_en: "Sim-to-Real Transfer"
     title_zh: "Sim-to-Real 迁移"
     papers:
+      - title: "SimWeaver: Zero-Shot RGB Sim-to-Real for Deformable Manipulation"
+        url: "https://arxiv.org/abs/2606.15338"
+        year: 2026
+        tags: [paper]
+        desc_en: "Combines measurement-backed cloth simulation, topology-aware trajectory synthesis, and photometric augmentation for RGB policy transfer."
+        desc_zh: "结合实测支撑的布料仿真、拓扑感知轨迹合成与光度增强，实现 RGB 操作策略的零样本实机迁移。"
+
+      - title: "SIM1: Physics-Aligned Simulator as Zero-Shot Data Scaler in Deformable Worlds"
+        url: "https://arxiv.org/abs/2604.08544"
+        year: 2026
+        tags: [paper]
+        desc_en: "Real-to-sim-to-real data generation with scene digitization, calibrated deformable dynamics, and filtered trajectory synthesis."
+        desc_zh: "结合场景数字化、柔性动力学校准和轨迹生成筛选的 real-to-sim-to-real 数据扩增流程。"
+
+      - title: "Sim-to-Real Gentle Manipulation of Deformable and Fragile Objects with Stress-Guided Reinforcement Learning"
+        url: "https://arxiv.org/abs/2510.25405"
+        year: 2025
+        tags: [paper]
+        desc_en: "Uses stress-penalized rewards and a rigid-to-deformable curriculum to transfer gentle manipulation policies to fragile real objects."
+        desc_zh: "通过应力惩罚奖励与从刚体到柔体的课程训练，将轻柔操作策略迁移到真实易损物体。"
+
       - title: "Learning to Manipulate Deformable Objects in the Real World via Sim2Real"
         url: "https://arxiv.org/abs/2512.11070"
         venue: arXiv
@@ -148,6 +197,48 @@ sections:
     title_en: "Benchmarks & Evaluation"
     title_zh: "基准测试与评估"
     papers:
+      - title: "DaXBench: Benchmarking Deformable Object Manipulation with Differentiable Physics"
+        url: "https://arxiv.org/abs/2210.13066"
+        year: 2022
+        tags: [paper, benchmark]
+        desc_en: "JAX-based differentiable benchmark covering cloth, rope, and fluids for planning, imitation learning, and reinforcement learning."
+        desc_zh: "基于 JAX 的可微物理基准，涵盖布料、绳索和流体，支持规划、模仿学习与强化学习评估。"
+
+      - title: "Real Garment Benchmark (RGBench): A Comprehensive Benchmark for Robotic Garment Manipulation featuring a High-Fidelity Scalable Simulator"
+        url: "https://arxiv.org/abs/2511.06434"
+        year: 2025
+        tags: [paper, benchmark, dataset]
+        desc_en: "Combines garment meshes, a cloth simulator, and real-motion measurements to evaluate physical simulation fidelity."
+        desc_zh: "结合衣物网格、布料仿真器和真实运动测量，评估衣物仿真的物理保真度。"
+
+      - title: "MoDeSuite: Robot Learning Task Suite for Benchmarking Mobile Manipulation with Deformable Objects"
+        url: "https://arxiv.org/abs/2507.21796"
+        year: 2025
+        tags: [paper, benchmark]
+        desc_en: "Mobile manipulation task suite for deformable objects, with reinforcement and imitation learning baselines and real-robot transfer experiments."
+        desc_zh: "面向柔性物体的移动操作任务集，提供强化学习、模仿学习基线与实机迁移实验。"
+
+      - title: "SoftVTBench: A Safety-Aware Visuo-Tactile Benchmark for Physically Constrained Robotic Manipulation of Deformable Objects (Early Version)"
+        url: "https://arxiv.org/abs/2607.04234"
+        year: 2026
+        tags: [paper, benchmark]
+        desc_en: "Early-version visuo-tactile benchmark using FEM deformation states to distinguish task success from physically safe manipulation."
+        desc_zh: "早期版本的视触觉基准，利用 FEM 形变状态区分任务成功与满足物理安全约束的操作。"
+
+      - title: "Real-to-Sim Robot Policy Evaluation with Gaussian Splatting Simulation of Soft-Body Interactions"
+        url: "https://arxiv.org/abs/2511.04665"
+        year: 2025
+        tags: [paper]
+        desc_en: "Reconstructs soft-body digital twins from videos and evaluates robot policies using physics simulation and Gaussian splatting rendering."
+        desc_zh: "从视频重建柔体数字孪生，结合物理仿真与高斯泼溅渲染评估机器人策略。"
+
+      - title: "PokeFlex: A Real-World Dataset of Volumetric Deformable Objects for Robotics"
+        url: "https://arxiv.org/abs/2410.07688"
+        year: 2024
+        tags: [paper, dataset]
+        desc_en: "Real-world multimodal deformation data with meshes, RGB-D observations, and interaction forces for learning and validating deformable models."
+        desc_zh: "提供网格、RGB-D 观测和交互力的真实体积柔性物体数据，用于形变模型学习与验证。"
+
       - title: "SoftGym: Benchmarking Deep Reinforcement Learning for Deformable Object Manipulation"
         url: "https://arxiv.org/abs/2011.07215"
         authors: "Xingyu Lin, Yufei Wang, Zixuan Huang, David Held"
@@ -161,6 +252,27 @@ sections:
     title_en: "3D Asset Generation for Simulation"
     title_zh: "面向仿真的 3D 资产生成"
     papers:
+      - title: "EMPM: Embodied MPM for Modeling and Simulation of Deformable Objects"
+        url: "https://arxiv.org/abs/2601.17251"
+        year: 2026
+        tags: [paper]
+        desc_en: "Reconstructs deformable objects from RGB-D videos and identifies material parameters with differentiable MPM and online sensory feedback."
+        desc_zh: "从 RGB-D 视频重建柔性物体，利用可微 MPM 与在线感知反馈辨识材料参数。"
+
+      - title: "NeuSpring: Neural Spring Fields for Reconstruction and Simulation of Deformable Objects from Videos"
+        url: "https://arxiv.org/abs/2511.08310"
+        year: 2025
+        tags: [paper]
+        desc_en: "Reconstructs deformable digital twins using piecewise spring topology and neural spring fields for spatially varying physical properties."
+        desc_zh: "通过分区弹簧拓扑与表示空间变化物性的神经弹簧场重建可仿真的柔体数字孪生。"
+
+      - title: "Image2Garment: Simulation-ready Garment Generation from a Single Image"
+        url: "https://arxiv.org/abs/2601.09658"
+        year: 2026
+        tags: [paper]
+        desc_en: "Predicts garment geometry and fabric physics from a single image using material attributes and measured material-to-physics mappings."
+        desc_zh: "从单图预测衣物几何与面料物理参数，借助材料属性和实测材料到物理参数映射生成可仿真衣物。"
+
       - title: "PhysX-3D: Physical-Grounded 3D Asset Generation"
         url: "https://arxiv.org/abs/2507.12465"
         authors: "Ziang Cao, Zhaoxi Chen, Liang Pan, Ziwei Liu"
@@ -214,6 +326,27 @@ sections:
     title_en: "Foundational Simulation Techniques"
     title_zh: "基础仿真技术"
     papers:
+      - title: "DiffCloth: Differentiable Cloth Simulation with Dry Frictional Contact"
+        url: "https://arxiv.org/abs/2106.05306"
+        year: 2021
+        tags: [paper, tool]
+        desc_en: "Differentiable cloth simulation with dry frictional contact for parameter identification, assisted dressing, and control."
+        desc_zh: "支持干摩擦接触的可微布料仿真，用于参数辨识、辅助穿衣和控制。"
+
+      - title: "AdaptiGraph: Material-Adaptive Graph-Based Neural Dynamics for Robotic Manipulation"
+        url: "https://arxiv.org/abs/2407.07889"
+        year: 2024
+        tags: [paper]
+        desc_en: "Material-conditioned graph dynamics with online physical-property estimation for adapting manipulation to unfamiliar deformable materials."
+        desc_zh: "结合材料条件化图动力学与在线物性估计，使操作模型适应未知柔性材料。"
+
+      - title: "Learning Mesh-Based Simulation with Graph Networks"
+        url: "https://arxiv.org/abs/2010.03409"
+        year: 2020
+        tags: [paper]
+        desc_en: "MeshGraphNets learns mesh-based dynamics, including cloth, with adaptive discretization and mesh-space and world-space interactions."
+        desc_zh: "MeshGraphNets 学习包括布料在内的网格动力学，结合自适应离散化及网格空间、世界空间交互。"
+
       - title: "XRTailor (OpenXRLab)"
         url: "https://github.com/openxrlab/xrtailor"
         tags: [tool]

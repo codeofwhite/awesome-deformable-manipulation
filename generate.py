@@ -37,7 +37,7 @@ def render_entry(paper: dict, lang: str) -> str:
     """Render a single paper entry as a markdown list item."""
     title = paper["title"]
     url = paper["url"]
-    tags = " ".join(TAG_EMOJI.get(t, "") for t in paper.get("tags", []))
+    tags = " ".join(dict.fromkeys(TAG_EMOJI[t] for t in paper.get("tags", []) if t in TAG_EMOJI))
     desc = paper.get(f"desc_{lang}", "")
 
     parts = [f"- [{title}]({url})"]
@@ -69,7 +69,7 @@ def generate(data: dict, lang: str, output_path: Path):
         "",
         f"> {desc}",
         "",
-        "[Project website](https://codeofwhite.github.io/awesome-soft-body-simulation/) | [English](README.md) | [中文](README.zh-CN.md)",
+        "[Project website](https://codeofwhite.github.io/awesome-deformable-manipulation/) | [English](README.md) | [中文](README.zh-CN.md)",
         "",
         "---",
         "",
