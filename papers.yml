@@ -1,9 +1,9 @@
 # ============================================================
-# Awesome Deformable Object Simulation for Embodied AI
+# Awesome Deformable Object Simulation and Manipulation for Embodied AI
 # ============================================================
-# Scope: deformable / soft body simulation FOR embodied AI —
-# simulation environments, manipulation tasks, sim-to-real,
-# benchmarks, asset generation, and learning methods.
+# Scope: deformable object simulation AND manipulation for embodied AI —
+# simulation environments, manipulation tasks and methods, sim-to-real,
+# benchmarks, asset generation, foundations, and surveys.
 #
 # To add a new paper: append an entry to the right section.
 # Then run: python generate.py
@@ -11,10 +11,10 @@
 # ============================================================
 
 meta:
-  title_en: "Awesome Deformable Object Simulation for Embodied AI"
-  title_zh: "Awesome 具身智能柔性物体仿真"
-  description_en: "A curated list of resources on simulating deformable objects (cloth, rope, soft bodies) for embodied intelligence — simulation environments, manipulation tasks, sim-to-real transfer, and asset generation."
-  description_zh: "面向具身智能的可变形体仿真精选资源 — 仿真环境、操作任务、Sim-to-Real 迁移与资产生成。"
+  title_en: "Awesome Deformable Object Simulation and Manipulation for Embodied AI"
+  title_zh: "Awesome 具身智能柔性物体仿真与操作"
+  description_en: "A curated list of resources on deformable object simulation and manipulation (cloth, rope, soft bodies) for embodied intelligence — simulation environments, perception and control, policy learning, sim-to-real transfer, benchmarks, asset generation, and surveys."
+  description_zh: "面向具身智能的柔性物体仿真与操作精选资源 — 仿真环境、感知与控制、策略学习、Sim-to-Real 迁移、基准测试、资产生成与综述。"
 
 # Each entry:
 #   - title:    paper title
@@ -159,6 +159,101 @@ sections:
         tags: [paper]
         desc_en: "Dynamics-based topology augmentation for deformable object manipulation policy learning, built on PhysTwin and Real2Render2Real."
         desc_zh: "基于动力学的拓扑增强方法，用于柔性物体操作策略学习，结合 PhysTwin 与 Real2Render2Real。"
+
+  - id: methods
+    title_en: "Deformable Object Manipulation Methods"
+    title_zh: "柔性物体操作方法"
+    papers:
+      - title: "Cloth Region Segmentation for Robust Grasp Selection"
+        url: "https://arxiv.org/abs/2008.05626"
+        year: 2020
+        tags: [paper]
+        desc_en: "Perception and grasping: segments cloth edges and corners from depth images and selects grasp poses, with real-robot grasp evaluation."
+        desc_zh: "感知与抓取：从深度图分割布料边缘和角点并选择抓取位姿，通过实机抓取实验评估。"
+
+      - title: "Center Direction Network for Grasping Point Localization on Cloths"
+        url: "https://arxiv.org/abs/2408.14456"
+        year: 2024
+        tags: [paper, dataset]
+        desc_en: "Perception and grasping: CeDiRNet-3DoF localizes cloth grasp points and provides the ViCoS Towel Dataset; evaluates perception rather than a complete manipulation pipeline."
+        desc_zh: "感知与抓取：CeDiRNet-3DoF 定位布料抓取点并提供 ViCoS 毛巾数据集，评估重点是感知而非完整操作流程。"
+
+      - title: "Visuotactile Affordances for Cloth Manipulation with Local Control"
+        url: "https://arxiv.org/abs/2212.05108"
+        year: 2022
+        tags: [paper]
+        desc_en: "Visuotactile control: grasps cloth edges using visual and tactile affordances, then slides along an edge to a corner with tactile feedback."
+        desc_zh: "视触觉控制：融合视觉与触觉可供性抓住布料边缘，再通过触觉反馈沿边滑动至角点。"
+
+      - title: "UniGarmentManip: A Unified Framework for Category-Level Garment Manipulation via Dense Visual Correspondence"
+        url: "https://arxiv.org/abs/2405.06903"
+        year: 2024
+        tags: [paper]
+        desc_en: "General garment manipulation: learns category-level dense correspondence to guide unfolding, folding, and hanging with one or few demonstrations."
+        desc_zh: "通用衣物操作：学习类别级稠密对应，以一个或少量示范引导展开、折叠与悬挂任务。"
+
+      - title: "CLASP: General-Purpose Clothes Manipulation with Semantic Keypoints"
+        url: "https://arxiv.org/abs/2507.19983"
+        year: 2025
+        tags: [paper]
+        desc_en: "General garment manipulation: connects VLM task plans to keypoint-conditioned skills for folding, flattening, hanging, and placing, with dual-arm real-robot evaluation."
+        desc_zh: "通用衣物操作：通过语义关键点连接 VLM 任务规划与操作技能，在双臂实机上评估折叠、铺平、悬挂与放置。"
+
+      - title: "Cloth Funnels: Canonicalized-Alignment for Multi-Purpose Garment Manipulation"
+        url: "https://arxiv.org/abs/2210.09347"
+        year: 2022
+        tags: [paper]
+        desc_en: "Tidying and folding: combines dynamic flings and pick-and-place actions to canonicalize garment configurations before real-world ironing and folding."
+        desc_zh: "整理与折叠：结合动态抖展与抓取放置，将衣物规整到标准配置，为实机熨烫和折叠提供初始状态。"
+
+      - title: "FoldNet: Learning Generalizable Closed-Loop Policy for Garment Folding via Keypoint-Driven Asset and Demonstration Synthesis"
+        url: "https://arxiv.org/abs/2505.09109"
+        year: 2025
+        tags: [paper]
+        desc_en: "Tidying and folding: synthesizes keypoint-annotated garment assets and demonstrations and uses KG-DAgger recovery data for closed-loop folding policies evaluated in simulation and reality."
+        desc_zh: "整理与折叠：生成带关键点标注的衣物资产和示范，结合 KG-DAgger 恢复数据学习闭环折叠策略，并在仿真与实机上评估。"
+
+      - title: "GarmentPile: Point-Level Visual Affordance Guided Retrieval and Adaptation for Cluttered Garments Manipulation"
+        url: "https://arxiv.org/abs/2503.09243"
+        year: 2025
+        tags: [paper]
+        desc_en: "Cluttered garments: learns point-level affordances and adapts entangled piles to support garment retrieval, with simulation and real-world evaluation."
+        desc_zh: "堆叠衣物操作：学习点级可供性并调整纠缠衣物堆以支持衣物检索，在仿真与真实场景中评估。"
+
+      - title: "GarmentPile++: Affordance-Driven Cluttered Garments Retrieval with Vision-Language Reasoning"
+        url: "https://arxiv.org/abs/2603.04158"
+        year: 2026
+        tags: [paper]
+        desc_en: "Cluttered garments: combines vision-language reasoning, segmentation, affordances, and dual-arm coordination for language-guided garment retrieval."
+        desc_zh: "堆叠衣物操作：结合视觉语言推理、分割、可供性与双臂协作，执行语言引导的衣物检索。"
+
+      - title: "DeformPAM: Data-Efficient Learning for Long-horizon Deformable Object Manipulation via Preference-based Action Alignment"
+        url: "https://arxiv.org/abs/2410.11584"
+        year: 2024
+        tags: [paper]
+        desc_en: "Policy learning: ranks diffusion-generated action candidates using a human-preference reward model for long-horizon real-world deformable manipulation."
+        desc_zh: "策略学习：利用人类偏好奖励模型筛选扩散模型生成的候选动作，支持真实场景中的长时序柔性物体操作。"
+
+      - title: "DeMaVLA: A Vision-Language-Action Foundation Model for Generalizable Deformable Manipulation"
+        url: "https://arxiv.org/abs/2605.31286"
+        year: 2026
+        tags: [paper]
+        desc_en: "Policy learning: combines real-world demonstration pretraining, flow-matching actions, and human-in-the-loop corrective data for garment folding across categories."
+        desc_zh: "策略学习：结合真实示范预训练、流匹配动作生成与人在回路纠错数据，学习跨类别衣物折叠策略。"
+
+      - title: "Learning to Rearrange Deformable Cables, Fabrics, and Bags with Goal-Conditioned Transporter Networks"
+        url: "https://arxiv.org/abs/2012.03385"
+        year: 2020
+        tags: [paper]
+        desc_en: "Multiple object types: uses image-goal-conditioned Transporter Networks for multi-step cable, fabric, and bag manipulation, evaluated in simulation and physical experiments."
+        desc_zh: "多类对象操作：以图像目标条件化的 Transporter Networks 执行线缆、织物和袋子的多步操作，在仿真与物理实验中评估。"
+
+      - title: "DextAIRity: Deformable Manipulation Can be a Breeze"
+        url: "https://arxiv.org/abs/2203.01197"
+        year: 2022
+        tags: [paper]
+        desc_en: "Airflow-assisted manipulation: combines grasping and closed-loop blowing actions for cloth unfolding and bag opening on a real three-arm system."
+        desc_zh: "气流辅助操作：结合抓取与闭环吹气动作，在真实三臂系统上完成布料展开和袋口打开。"
 
   - id: sim2real
     title_en: "Sim-to-Real Transfer"
@@ -374,3 +469,21 @@ sections:
         tags: [paper]
         desc_en: "High-order finite element method for improving accuracy in cloth / thin-shell simulation."
         desc_zh: "高阶有限元法用于布料/薄壳仿真的精度提升。"
+
+  - id: surveys
+    title_en: "Surveys & Reading Guides"
+    title_zh: "综述与阅读指南"
+    papers:
+      - title: "A Survey on Robotic Manipulation of Deformable Objects: Recent Advances, Open Challenges and New Frontiers"
+        url: "https://arxiv.org/abs/2312.10419"
+        year: 2023
+        tags: [paper]
+        desc_en: "Survey: reviews deformable-object perception, modeling, and manipulation, emphasizing data-driven approaches and open research challenges."
+        desc_zh: "综述：梳理柔性物体感知、建模与操作，重点覆盖数据驱动方法及开放研究问题。"
+
+      - title: "Unfolding the Literature: A Review of Robotic Cloth Manipulation"
+        url: "https://arxiv.org/abs/2407.01361"
+        year: 2024
+        tags: [paper]
+        desc_en: "Survey: reviews how textile variation is addressed in modeling, perception, benchmarking, and manipulation, and identifies generalization challenges."
+        desc_zh: "综述：分析建模、感知、评测与操作如何处理织物差异，并梳理泛化挑战。"

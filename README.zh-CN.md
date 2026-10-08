@@ -1,6 +1,6 @@
-# Awesome 具身智能柔性物体仿真 🧸 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# Awesome 具身智能柔性物体仿真与操作 🧸 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-> 面向具身智能的可变形体仿真精选资源 — 仿真环境、操作任务、Sim-to-Real 迁移与资产生成。
+> 面向具身智能的柔性物体仿真与操作精选资源 — 仿真环境、感知与控制、策略学习、Sim-to-Real 迁移、基准测试、资产生成与综述。
 
 [Project website](https://codeofwhite.github.io/awesome-deformable-manipulation/) | [English](README.md) | [中文](README.zh-CN.md)
 
@@ -10,10 +10,12 @@
 
 - [仿真环境与平台](#仿真环境与平台)
 - [柔性物体操作任务](#柔性物体操作任务)
+- [柔性物体操作方法](#柔性物体操作方法)
 - [Sim-to-Real 迁移](#sim-to-real-迁移)
 - [基准测试与评估](#基准测试与评估)
 - [面向仿真的 3D 资产生成](#面向仿真的-3d-资产生成)
 - [基础仿真技术](#基础仿真技术)
+- [综述与阅读指南](#综述与阅读指南)
 - [图例](#图例)
 
 ---
@@ -40,6 +42,22 @@
 - [Benchmarking the Sim-to-Real Gap in Cloth Manipulation](https://arxiv.org/abs/2310.09543) - 布料操作中 sim-to-real gap 的系统评测，对仿真器选型有重要参考价值。 📄 📊
 - [SoftMimicGen: A Data Generation System for Scalable Robot Learning in Deformable Object Manipulation](https://arxiv.org/abs/2603.25725) - MimicGen 在柔性物体操作领域的扩展，实现可扩展的机器人操作数据生成。 📄 ⭐
 - [DeformGen: Dynamics-Based Topology Augmentation for Deformable Manipulation Policy Learning](https://arxiv.org/abs/2606.25939) - 基于动力学的拓扑增强方法，用于柔性物体操作策略学习，结合 PhysTwin 与 Real2Render2Real。 📄
+
+## 柔性物体操作方法
+
+- [Cloth Region Segmentation for Robust Grasp Selection](https://arxiv.org/abs/2008.05626) - 感知与抓取：从深度图分割布料边缘和角点并选择抓取位姿，通过实机抓取实验评估。 📄
+- [Center Direction Network for Grasping Point Localization on Cloths](https://arxiv.org/abs/2408.14456) - 感知与抓取：CeDiRNet-3DoF 定位布料抓取点并提供 ViCoS 毛巾数据集，评估重点是感知而非完整操作流程。 📄 📊
+- [Visuotactile Affordances for Cloth Manipulation with Local Control](https://arxiv.org/abs/2212.05108) - 视触觉控制：融合视觉与触觉可供性抓住布料边缘，再通过触觉反馈沿边滑动至角点。 📄
+- [UniGarmentManip: A Unified Framework for Category-Level Garment Manipulation via Dense Visual Correspondence](https://arxiv.org/abs/2405.06903) - 通用衣物操作：学习类别级稠密对应，以一个或少量示范引导展开、折叠与悬挂任务。 📄
+- [CLASP: General-Purpose Clothes Manipulation with Semantic Keypoints](https://arxiv.org/abs/2507.19983) - 通用衣物操作：通过语义关键点连接 VLM 任务规划与操作技能，在双臂实机上评估折叠、铺平、悬挂与放置。 📄
+- [Cloth Funnels: Canonicalized-Alignment for Multi-Purpose Garment Manipulation](https://arxiv.org/abs/2210.09347) - 整理与折叠：结合动态抖展与抓取放置，将衣物规整到标准配置，为实机熨烫和折叠提供初始状态。 📄
+- [FoldNet: Learning Generalizable Closed-Loop Policy for Garment Folding via Keypoint-Driven Asset and Demonstration Synthesis](https://arxiv.org/abs/2505.09109) - 整理与折叠：生成带关键点标注的衣物资产和示范，结合 KG-DAgger 恢复数据学习闭环折叠策略，并在仿真与实机上评估。 📄
+- [GarmentPile: Point-Level Visual Affordance Guided Retrieval and Adaptation for Cluttered Garments Manipulation](https://arxiv.org/abs/2503.09243) - 堆叠衣物操作：学习点级可供性并调整纠缠衣物堆以支持衣物检索，在仿真与真实场景中评估。 📄
+- [GarmentPile++: Affordance-Driven Cluttered Garments Retrieval with Vision-Language Reasoning](https://arxiv.org/abs/2603.04158) - 堆叠衣物操作：结合视觉语言推理、分割、可供性与双臂协作，执行语言引导的衣物检索。 📄
+- [DeformPAM: Data-Efficient Learning for Long-horizon Deformable Object Manipulation via Preference-based Action Alignment](https://arxiv.org/abs/2410.11584) - 策略学习：利用人类偏好奖励模型筛选扩散模型生成的候选动作，支持真实场景中的长时序柔性物体操作。 📄
+- [DeMaVLA: A Vision-Language-Action Foundation Model for Generalizable Deformable Manipulation](https://arxiv.org/abs/2605.31286) - 策略学习：结合真实示范预训练、流匹配动作生成与人在回路纠错数据，学习跨类别衣物折叠策略。 📄
+- [Learning to Rearrange Deformable Cables, Fabrics, and Bags with Goal-Conditioned Transporter Networks](https://arxiv.org/abs/2012.03385) - 多类对象操作：以图像目标条件化的 Transporter Networks 执行线缆、织物和袋子的多步操作，在仿真与物理实验中评估。 📄
+- [DextAIRity: Deformable Manipulation Can be a Breeze](https://arxiv.org/abs/2203.01197) - 气流辅助操作：结合抓取与闭环吹气动作，在真实三臂系统上完成布料展开和袋口打开。 📄
 
 ## Sim-to-Real 迁移
 
@@ -79,6 +97,11 @@
 - [Position Based Dynamics (PBD)](https://matthias-research.github.io/pages/tenMinutePhysics/) - Position Based Dynamics 模拟的经典入门资源。 🔧
 - [ThinShellLab: Thin-Shell Object Manipulations With Differentiable Physics Simulations](https://arxiv.org/abs/2404.00451) - 完全可微的薄壳仿真平台，覆盖纸、布等不同弯曲刚度的材料。 📄 🔧
 - [Second-Order FEM for Deformable Surfaces](https://dl.acm.org/doi/10.1145/3592430) - 高阶有限元法用于布料/薄壳仿真的精度提升。 📄
+
+## 综述与阅读指南
+
+- [A Survey on Robotic Manipulation of Deformable Objects: Recent Advances, Open Challenges and New Frontiers](https://arxiv.org/abs/2312.10419) - 综述：梳理柔性物体感知、建模与操作，重点覆盖数据驱动方法及开放研究问题。 📄
+- [Unfolding the Literature: A Review of Robotic Cloth Manipulation](https://arxiv.org/abs/2407.01361) - 综述：分析建模、感知、评测与操作如何处理织物差异，并梳理泛化挑战。 📄
 
 ---
 

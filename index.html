@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="面向具身智能的柔性物体仿真精选资源，覆盖仿真环境、操作任务、Sim-to-Real、基准测试与资产生成。">
+  <meta name="description" content="面向具身智能的柔性物体仿真与操作精选资源，覆盖感知控制、策略学习、仿真、迁移、基准、资产生成与综述。">
   <meta name="theme-color" content="#07110f">
-  <title>Soft Body Atlas · 具身智能柔性物体仿真</title>
+  <title>Soft Body Atlas · 具身智能柔性物体仿真与操作</title>
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
@@ -24,7 +24,7 @@
       <a href="#highlights">精选资源</a>
       <a href="#contribute">参与贡献</a>
     </nav>
-    <a class="header-action" href="https://github.com/codeofwhite/awesome-soft-body-simulation" target="_blank" rel="noreferrer">
+    <a class="header-action" href="https://github.com/codeofwhite/awesome-deformable-manipulation" target="_blank" rel="noreferrer">
       GitHub <span aria-hidden="true">↗</span>
     </a>
   </header>
@@ -37,7 +37,7 @@
         <p class="eyebrow"><span></span> Awesome list for Embodied AI</p>
         <h1>让机器人理解<br><em>柔软的世界</em></h1>
         <p class="hero-copy">
-          一份面向具身智能研究者的可变形体仿真资源图谱，聚合布料、绳索与软体的仿真环境、操作任务、迁移方法和生成技术。
+          一份面向具身智能研究者的柔性物体仿真与操作资源图谱，聚合布料、绳索与软体的感知控制、操作策略、仿真迁移和生成技术。
         </p>
         <div class="hero-actions">
           <a class="button button-primary" href="#scope">探索资源 <span aria-hidden="true">↓</span></a>
@@ -47,11 +47,11 @@
 
       <div class="hero-aside" aria-label="项目数据">
         <div class="stat">
-          <strong>44</strong>
+          <strong>59</strong>
           <span>精选资源</span>
         </div>
         <div class="stat">
-          <strong>06</strong>
+          <strong>08</strong>
           <span>研究方向</span>
         </div>
         <div class="stat stat-wide">
@@ -88,9 +88,9 @@
         <div class="section-heading">
           <div>
             <p class="section-index">02 / RESEARCH MAP</p>
-            <h2 id="scope-title">六个方向，<em>一张地图</em></h2>
+            <h2 id="scope-title">八个方向，<em>一张地图</em></h2>
           </div>
-          <p>从底层求解器到真实世界部署，覆盖柔性物体仿真的关键研究环节。</p>
+          <p>从底层求解器到真实世界部署，覆盖柔性物体仿真与操作的关键研究环节。</p>
         </div>
 
         <div class="scope-grid">
@@ -106,32 +106,43 @@
 
           <article class="scope-card">
             <div class="card-top"><span>02</span><span class="card-icon">◇</span></div>
-            <div><p>MANIPULATION</p><h3>柔性物体操作</h3><p>折叠、悬挂、抓取与移动操作的任务、数据和策略学习。</p></div>
+            <div><p>MANIPULATION</p><h3>柔性物体操作任务</h3><p>折叠、悬挂、抓取与移动操作的任务、数据和策略学习。</p></div>
             <a href="README.zh-CN.md#柔性物体操作任务">9 项资源 <span>↗</span></a>
           </article>
 
           <article class="scope-card">
-            <div class="card-top"><span>03</span><span class="card-icon">⇄</span></div>
+            <div class="card-top"><span>03</span><span class="card-icon">◇</span></div>
+            <div><p>MANIPULATION METHODS</p><h3>柔性物体操作方法</h3><p>从抓取点感知、视触觉反馈到通用衣物操作与策略学习。</p></div>
+            <a href="README.zh-CN.md#柔性物体操作方法">13 项资源 <span>↗</span></a>
+          </article>
+
+          <article class="scope-card">
+            <div class="card-top"><span>04</span><span class="card-icon">⇄</span></div>
             <div><p>SIM-TO-REAL</p><h3>仿真到现实</h3><p>缩小动力学与视觉域差异，让模拟训练真正抵达现实世界。</p></div>
             <a href="README.zh-CN.md#sim-to-real-迁移">4 项资源 <span>↗</span></a>
           </article>
 
           <article class="scope-card">
-            <div class="card-top"><span>04</span><span class="card-icon">▦</span></div>
+            <div class="card-top"><span>05</span><span class="card-icon">▦</span></div>
             <div><p>BENCHMARKS</p><h3>基准与评估</h3><p>用标准环境与统一指标，可靠比较算法的学习效率和泛化能力。</p></div>
             <a href="README.zh-CN.md#基准测试与评估">7 项资源 <span>↗</span></a>
           </article>
 
           <article class="scope-card">
-            <div class="card-top"><span>05</span><span class="card-icon">✦</span></div>
+            <div class="card-top"><span>06</span><span class="card-icon">✦</span></div>
             <div><p>3D GENERATION</p><h3>物理资产生成</h3><p>从图像或视频重建可仿真、带物理属性的三维柔性资产。</p></div>
             <a href="README.zh-CN.md#面向仿真的-3d-资产生成">9 项资源 <span>↗</span></a>
           </article>
 
           <article class="scope-card">
-            <div class="card-top"><span>06</span><span class="card-icon">∿</span></div>
+            <div class="card-top"><span>07</span><span class="card-icon">∿</span></div>
             <div><p>FOUNDATIONS</p><h3>基础仿真技术</h3><p>PBD、有限元与可微物理：理解柔性体运动背后的计算方法。</p></div>
             <a href="README.zh-CN.md#基础仿真技术">7 项资源 <span>↗</span></a>
+          </article>
+          <article class="scope-card">
+            <div class="card-top"><span>08</span><span class="card-icon">▤</span></div>
+            <div><p>SURVEYS</p><h3>综述与阅读指南</h3><p>建立柔性物体与布料操作领域地图，梳理方法脉络和开放问题。</p></div>
+            <a href="README.zh-CN.md#综述与阅读指南">2 项资源 <span>↗</span></a>
           </article>
         </div>
       </div>
@@ -143,7 +154,7 @@
           <p class="section-index">03 / HIGHLIGHTS</p>
           <h2 id="highlights-title">从这里开始</h2>
         </div>
-        <a class="text-link" href="README.zh-CN.md">全部 44 项资源 <span>→</span></a>
+        <a class="text-link" href="README.zh-CN.md">全部 59 项资源 <span>→</span></a>
       </div>
 
       <div class="resource-list">
@@ -167,6 +178,16 @@
           <span class="resource-main"><small>TOOL · DIFFERENTIABLE</small><strong>Taichi</strong><span>面向并行计算与可微仿真的高性能语言</span></span>
           <span class="resource-year">TOOL</span><span class="resource-arrow">↗</span>
         </a>
+        <a class="resource" href="https://arxiv.org/abs/2507.19983" target="_blank" rel="noreferrer">
+          <span class="resource-number">05</span>
+          <span class="resource-main"><small>SEMANTIC KEYPOINTS · MANIPULATION</small><strong>CLASP</strong><span>语义关键点连接规划与多任务衣物操作</span></span>
+          <span class="resource-year">2025</span><span class="resource-arrow">↗</span>
+        </a>
+        <a class="resource" href="https://arxiv.org/abs/2410.11584" target="_blank" rel="noreferrer">
+          <span class="resource-number">06</span>
+          <span class="resource-main"><small>PREFERENCE LEARNING · POLICY</small><strong>DeformPAM</strong><span>偏好引导的长时序柔性物体操作</span></span>
+          <span class="resource-year">2024</span><span class="resource-arrow">↗</span>
+        </a>
       </div>
     </section>
 
@@ -178,7 +199,7 @@
         <p>发现了值得收录的论文、工具或数据集？欢迎提交 Pull Request，让这份清单持续生长。</p>
         <div class="hero-actions">
           <a class="button button-light" href="CONTRIBUTING.md">查看贡献指南</a>
-          <a class="button button-outline" href="https://github.com/codeofwhite/awesome-soft-body-simulation" target="_blank" rel="noreferrer">访问 GitHub <span>↗</span></a>
+          <a class="button button-outline" href="https://github.com/codeofwhite/awesome-deformable-manipulation" target="_blank" rel="noreferrer">访问 GitHub <span>↗</span></a>
         </div>
       </div>
     </section>

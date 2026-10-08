@@ -1,6 +1,6 @@
-# Awesome Deformable Object Simulation for Embodied AI 🧸 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# Awesome Deformable Object Simulation and Manipulation for Embodied AI 🧸 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-> A curated list of resources on simulating deformable objects (cloth, rope, soft bodies) for embodied intelligence — simulation environments, manipulation tasks, sim-to-real transfer, and asset generation.
+> A curated list of resources on deformable object simulation and manipulation (cloth, rope, soft bodies) for embodied intelligence — simulation environments, perception and control, policy learning, sim-to-real transfer, benchmarks, asset generation, and surveys.
 
 [Project website](https://codeofwhite.github.io/awesome-deformable-manipulation/) | [English](README.md) | [中文](README.zh-CN.md)
 
@@ -10,10 +10,12 @@
 
 - [Simulation Environments & Platforms](#simulation-environments--platforms)
 - [Deformable Object Manipulation Tasks](#deformable-object-manipulation-tasks)
+- [Deformable Object Manipulation Methods](#deformable-object-manipulation-methods)
 - [Sim-to-Real Transfer](#sim-to-real-transfer)
 - [Benchmarks & Evaluation](#benchmarks--evaluation)
 - [3D Asset Generation for Simulation](#3d-asset-generation-for-simulation)
 - [Foundational Simulation Techniques](#foundational-simulation-techniques)
+- [Surveys & Reading Guides](#surveys--reading-guides)
 - [Legend](#legend)
 
 ---
@@ -40,6 +42,22 @@
 - [Benchmarking the Sim-to-Real Gap in Cloth Manipulation](https://arxiv.org/abs/2310.09543) - Systematic evaluation of the sim-to-real gap in cloth manipulation across different simulators. 📄 📊
 - [SoftMimicGen: A Data Generation System for Scalable Robot Learning in Deformable Object Manipulation](https://arxiv.org/abs/2603.25725) - Extends MimicGen to deformable object manipulation, enabling scalable robot demonstration data generation. 📄 ⭐
 - [DeformGen: Dynamics-Based Topology Augmentation for Deformable Manipulation Policy Learning](https://arxiv.org/abs/2606.25939) - Dynamics-based topology augmentation for deformable object manipulation policy learning, built on PhysTwin and Real2Render2Real. 📄
+
+## Deformable Object Manipulation Methods
+
+- [Cloth Region Segmentation for Robust Grasp Selection](https://arxiv.org/abs/2008.05626) - Perception and grasping: segments cloth edges and corners from depth images and selects grasp poses, with real-robot grasp evaluation. 📄
+- [Center Direction Network for Grasping Point Localization on Cloths](https://arxiv.org/abs/2408.14456) - Perception and grasping: CeDiRNet-3DoF localizes cloth grasp points and provides the ViCoS Towel Dataset; evaluates perception rather than a complete manipulation pipeline. 📄 📊
+- [Visuotactile Affordances for Cloth Manipulation with Local Control](https://arxiv.org/abs/2212.05108) - Visuotactile control: grasps cloth edges using visual and tactile affordances, then slides along an edge to a corner with tactile feedback. 📄
+- [UniGarmentManip: A Unified Framework for Category-Level Garment Manipulation via Dense Visual Correspondence](https://arxiv.org/abs/2405.06903) - General garment manipulation: learns category-level dense correspondence to guide unfolding, folding, and hanging with one or few demonstrations. 📄
+- [CLASP: General-Purpose Clothes Manipulation with Semantic Keypoints](https://arxiv.org/abs/2507.19983) - General garment manipulation: connects VLM task plans to keypoint-conditioned skills for folding, flattening, hanging, and placing, with dual-arm real-robot evaluation. 📄
+- [Cloth Funnels: Canonicalized-Alignment for Multi-Purpose Garment Manipulation](https://arxiv.org/abs/2210.09347) - Tidying and folding: combines dynamic flings and pick-and-place actions to canonicalize garment configurations before real-world ironing and folding. 📄
+- [FoldNet: Learning Generalizable Closed-Loop Policy for Garment Folding via Keypoint-Driven Asset and Demonstration Synthesis](https://arxiv.org/abs/2505.09109) - Tidying and folding: synthesizes keypoint-annotated garment assets and demonstrations and uses KG-DAgger recovery data for closed-loop folding policies evaluated in simulation and reality. 📄
+- [GarmentPile: Point-Level Visual Affordance Guided Retrieval and Adaptation for Cluttered Garments Manipulation](https://arxiv.org/abs/2503.09243) - Cluttered garments: learns point-level affordances and adapts entangled piles to support garment retrieval, with simulation and real-world evaluation. 📄
+- [GarmentPile++: Affordance-Driven Cluttered Garments Retrieval with Vision-Language Reasoning](https://arxiv.org/abs/2603.04158) - Cluttered garments: combines vision-language reasoning, segmentation, affordances, and dual-arm coordination for language-guided garment retrieval. 📄
+- [DeformPAM: Data-Efficient Learning for Long-horizon Deformable Object Manipulation via Preference-based Action Alignment](https://arxiv.org/abs/2410.11584) - Policy learning: ranks diffusion-generated action candidates using a human-preference reward model for long-horizon real-world deformable manipulation. 📄
+- [DeMaVLA: A Vision-Language-Action Foundation Model for Generalizable Deformable Manipulation](https://arxiv.org/abs/2605.31286) - Policy learning: combines real-world demonstration pretraining, flow-matching actions, and human-in-the-loop corrective data for garment folding across categories. 📄
+- [Learning to Rearrange Deformable Cables, Fabrics, and Bags with Goal-Conditioned Transporter Networks](https://arxiv.org/abs/2012.03385) - Multiple object types: uses image-goal-conditioned Transporter Networks for multi-step cable, fabric, and bag manipulation, evaluated in simulation and physical experiments. 📄
+- [DextAIRity: Deformable Manipulation Can be a Breeze](https://arxiv.org/abs/2203.01197) - Airflow-assisted manipulation: combines grasping and closed-loop blowing actions for cloth unfolding and bag opening on a real three-arm system. 📄
 
 ## Sim-to-Real Transfer
 
@@ -79,6 +97,11 @@
 - [Position Based Dynamics (PBD)](https://matthias-research.github.io/pages/tenMinutePhysics/) - Classic introductory resource for Position Based Dynamics simulation. 🔧
 - [ThinShellLab: Thin-Shell Object Manipulations With Differentiable Physics Simulations](https://arxiv.org/abs/2404.00451) - Fully differentiable simulation platform for thin-shell materials (paper, cloth) with varying bending stiffness. 📄 🔧
 - [Second-Order FEM for Deformable Surfaces](https://dl.acm.org/doi/10.1145/3592430) - High-order finite element method for improving accuracy in cloth / thin-shell simulation. 📄
+
+## Surveys & Reading Guides
+
+- [A Survey on Robotic Manipulation of Deformable Objects: Recent Advances, Open Challenges and New Frontiers](https://arxiv.org/abs/2312.10419) - Survey: reviews deformable-object perception, modeling, and manipulation, emphasizing data-driven approaches and open research challenges. 📄
+- [Unfolding the Literature: A Review of Robotic Cloth Manipulation](https://arxiv.org/abs/2407.01361) - Survey: reviews how textile variation is addressed in modeling, perception, benchmarking, and manipulation, and identifies generalization challenges. 📄
 
 ---
 
